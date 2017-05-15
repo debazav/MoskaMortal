@@ -79,7 +79,7 @@ public class Pi {
         System.out.println();
         for (int linha = 0; linha < arena.length; linha++) {
             for (int coluna = 0; coluna < arena.length; coluna++) {
-                if (coluna == 0 || coluna == (arena.length - 1)) {
+                if (coluna == 0 || coluna == (arena.length )) {
                     System.out.print(" || ");
                     
                 }
@@ -92,11 +92,12 @@ public class Pi {
                     System.out.print(" 8 ");
                 }
 
-                if (arena[linha][coluna] == 0 && coluna != 0 && coluna != (arena.length - 1) && linha != 0 && linha != (arena.length - 1)) {
+                if (coluna != 0 && coluna != (arena.length) && linha != 0 && linha != (arena.length - 1)) {
                     System.out.print(" . ");
                 }
 
             }
+            System.out.print(" || ");
             System.out.println();
         }
 
