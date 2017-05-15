@@ -43,8 +43,9 @@ public class Pi {
         }
         //Inicia o jogo
         while (esmagou == false) {
-            //arena = posicaoMosca(arena);
-            //tapa
+            arena = posicaoMosca(arena);
+            desenhaArena(arena);
+            //esmagou = true;
             //conferir acerto
             //
 
@@ -65,9 +66,9 @@ public class Pi {
 
     public static int[][] posicaoMosca(int[][] arena) {
         int linha, coluna;
-        Random gp = new Random(arena.length - 1);// pega tamanho da arena -1 pra não estourar o array
-        linha = gp.nextInt();
-        coluna = gp.nextInt();
+        Random gp = new Random();// pega tamanho da arena -1 pra não estourar o array
+        linha = gp.nextInt(arena.length-1);
+        coluna = gp.nextInt(arena.length-1);
 
         int[][] novapos = new int[arena.length][arena.length];
 
@@ -78,27 +79,30 @@ public class Pi {
     public static void desenhaArena(int[][] arena) {
         System.out.println();
         for (int linha = 0; linha < arena.length; linha++) {
+            
             for (int coluna = 0; coluna < arena.length; coluna++) {
-                if (coluna == 0 || coluna == (arena.length )) {
+                
+                if (coluna == 0 || coluna == (arena.length)) {
                     System.out.print(" || ");
                     
                 }
 
-                if (linha == 0 || linha == (arena.length - 1)) {
+                if (linha == 0 || linha == (arena.length)) {
                     System.out.print(" = ");
                 }
+                
 
                 if (arena[linha][coluna] == 1) {
                     System.out.print(" 8 ");
                 }
 
-                if (coluna != 0 && coluna != (arena.length) && linha != 0 && linha != (arena.length - 1)) {
+                if (coluna != 0 && coluna != (arena.length) && linha != 0 && linha != (arena.length)&& arena[linha][coluna] != 8) {
                     System.out.print(" . ");
                 }
 
             }
-            System.out.print(" || ");
-            System.out.println();
+            
+            System.out.println(" || ");
         }
 
     }
