@@ -20,10 +20,11 @@ public class Pi {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner ler = new Scanner(System.in);
-        int j1 =0, j2=0;
+        int j1 = 0, j2 = 0;
         int[][] arena = new int[1][1];
         boolean esmagou = false;
         //Pedir tamanho da arena
+        desenhaMosca();
         int op = menuArena();
         switch (op) {
             case 1:
@@ -42,25 +43,24 @@ public class Pi {
                 System.out.println("Opção inválida");
         }
         //Inicia o jogo
-        while (j1 != 5) {            
+        while (j1 != 5) {
             desenhaArena(arena);
             arena = posicaoMosca(arena);
-            System.out.println("Digite a coluna do tapa:");
-            int colunaTapa = ler.nextInt();
-            System.out.println("Digite a linha do tapa:");
-            int linhaTapa = ler.nextInt();
-            if (arena[colunaTapa-1][linhaTapa-1] == 1) {
-                esmagou = true;
-                j1++;
-                System.out.println("  _________      .__          _____  __  ._._._.");
-                System.out.println(" /   _____/_____ |  | _____ _/ ____\\/  |_| | | |");
-                System.out.println(" \\_____  \\\\____ \\|  | \\__  \\\\   __\\\\   __\\ | | |");
-                System.out.println(" /        \\  |_> >  |__/ __ \\|  |   |  |  \\|\\|\\|");
-                System.out.println("/_______  /   __/|____(____  /__|   |__|  ______");
-                System.out.println("        \\/|__|             \\/             \\/\\/\\/");
-                System.out.println("PONTUAÇÃO: " + j1);
+            try {
+                System.out.println("Digite a coluna do tapa:");
+                int colunaTapa = ler.nextInt();
+                System.out.println("Digite a linha do tapa:");
+                int linhaTapa = ler.nextInt();
+                if (arena[colunaTapa - 1][linhaTapa - 1] == 1) {
+                    esmagou = true;
+                    j1++;
+
+                    System.out.println("PONTUAÇÃO: " + j1);
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Posição inválida");
+
             }
-            
 
             //conferir acerto
             //
@@ -116,6 +116,73 @@ public class Pi {
             System.out.println("||");
         }
 
+    }
+
+    public static void splaft() {
+        System.out.println("  _________      .__          _____  __  ._._._.");
+        System.out.println(" /   _____/_____ |  | _____ _/ ____\\/  |_| | | |");
+        System.out.println(" \\_____  \\\\____ \\|  | \\__  \\\\   __\\\\   __\\ | | |");
+        System.out.println(" /        \\  |_> >  |__/ __ \\|  |   |  |  \\|\\|\\|");
+        System.out.println("/_______  /   __/|____(____  /__|   |__|  ______");
+        System.out.println("        \\/|__|             \\/             \\/\\/\\/");
+    }
+
+    public static void desenhaMosca() {
+        System.out.println("                                                                        *@@@     ,*#                                              ,,,                          ");
+        System.out.println("                                                                      @@@@@,&@@@@@@@.                                           .@@@@@@#                       ");
+        System.out.println("                                                                    .@@@#.@@@@(                                                       @@@(                     ");
+        System.out.println("                                                                    &@   @@         ,,,,                      .,#%&%&%%*,              .@@( %                  ");
+        System.out.println("                                                                               &@@@@@@@@@@@@@*          *@@@@@@@@@@@@@@@@@@@@.           @@.%@&                ");
+        System.out.println("                                                                             @@@@@%.     .%@@@@@(   #@@@@@@(.            (@@@@@          %@%.@@                ");
+        System.out.println("                                                                           @@@@               @@@@@@@@.                      @@@@         @@ @@.               ");
+        System.out.println("                                                       ,*##(,.            @@@/                 &@@@@.                         #@@@        @@.@@                ");
+        System.out.println("                                                 .@@@@@@@@@@@@@@@@&.     @@@.                  %@@&                            ,@@@       @@.%&                ");
+        System.out.println("                                              ,@@@@@@&.       .@@@@@@@/ @@@.                   @@&                              ,@@(     .@@ (                 ");
+        System.out.println("                          .@@@@@@@@@@@@@@#  &@@@@.                 %@@@@@@#                   (@@                 @.             @@@.    (@&                   ");
+        System.out.println("                        &@@@@@.      .&@@@@@@@@                       @@@@                    @@,                .@.             &@@%      .                   ");
+        System.out.println("                      @@@@               %@@@                           @@@                  .@@                 %@              .@@@                          ");
+        System.out.println("                    ,@@@                (@@/                             @@@.                %@%                 &@              .@@@                          ");
+        System.out.println("                   &@@.                ,@@.                               @@@                @@.                 @&              %@@%                          ");
+        System.out.println("                  *@@.                 @@&                                 @@%               @@.                 @.              @@@                           ");
+        System.out.println("                  @@(          .@&    #@@                     ,@@@#        %@@.              @@          @%.    ,@   .          &@@                            ");
+        System.out.println("                 .@@           .@@@(  @@@                    ,@@@@@@       .@@@              @@            @@@@%@@@@/          @@@                             ");
+        System.out.println("                 %@%           .@@@@@@@@&                   .@@@@@@@@       @@@%             @@               @@@@.           @@@                              ");
+        System.out.println("                 %@%           .@@@@@&@@%                  .@@@@@@@@@       @@@@@@           @@                @@            @@@                               ");
+        System.out.println("                 .@@             @@@. @@@                  &@@@@@@@@@      .@@@ .@@@,        @@                @           #@@(                                ");
+        System.out.println("                  @@%                 @@@                  @@@@@@@.        &@@.   .@@@       @@          .(%@@@#%@@.      &@@.                                 ");
+        System.out.println("                  .@@,                 @@&                                ,@@&      .@@.     @@      .@@%.    @@.       ,@@,                                   ");
+        System.out.println("                   &@@,                ,@@,                               @@@         @@%    %@             .@        .@@@                                     ");
+        System.out.println("                     @@@,               /@@/                            .@@@          .@@@   .@/           @.       (@@@                                       ");
+        System.out.println("                      @@@@*              &@@@                          &@@@            &@@&   @@.        @@@@@@@@@@@@@                                         ");
+        System.out.println("                        .@@@@@@%%%%%@@@@@@@@@@&                      %@@@.              &@@%  .@@##%&@@@@@@@@@@@@@@@@@@.                                       ");
+        System.out.println("                           @@@@@@@@@@&.      @@@@,                *@@@@/                 @@@( %@@@@@@@@/.          .@@@@@                                      ");
+        System.out.println("                            &@@@.              .@@@@@%/,.  .,/&@@@@@@                    %@@@@@@@@,                   /@@@&                                    ");
+        System.out.println("                           .@@@                   ,@@@@@@@@@@@@@@%             @@@@       @@@@&                        .@@@@                                   ");
+        System.out.println("                           @@@.                                                   @  @    #@@@                           @@@@                                  ");
+        System.out.println("                           @@@                                           *@@@(    @*       @@@                           .@@@.                                 ");
+        System.out.println("                          .@@.                                         ,@@/@@@    @        @@@.                           @@@&                                 ");
+        System.out.println("                          %@@                                         #@@   @@*  @%        &@@.                           .@@@                                 ");
+        System.out.println("                          @@@                                        @@.     @@  @         %@@%                            @@@                                 ");
+        System.out.println("                          @@@                                     ,@@@       @@            %@@/                            @@@.                                ");
+        System.out.println("                          &@@.                                  (@@@@@.      @@@           &@@.                            @@@.                                ");
+        System.out.println("                          %@@#                                &@@/ .@@@@(    @@@,          @@@                             @@@.                                ");
+        System.out.println("                           @@@                              &@@     &@,@@@@  ,@@&         (@@.                             @@@                                 ");
+        System.out.println("                           &@@.                          *@@@#      .@   @@@  @@@         @@&                              @@@                                 ");
+        System.out.println("                            @@@                      @@@@@ @@@@@     @     @@#@@@        &@@                              (@@&                                 ");
+        System.out.println("                            .@@&                @@@@@@@    @@ @@@    @     @@@@@@       (@@/                              @@@                                  ");
+        System.out.println("                             ,@@@   @@@@@@@@@@@@@# @@ @@@  @@  %@@%,&@.     @@@@@      &@@@#                            .@@@                                   ");
+        System.out.println("                              &@@@   %@@*  @@@@,   @@  @@%/@@   .@@ &@        ..      @@@@@@@%                        ,@@@@                                    ");
+        System.out.println("                               &@@@.   @@.  @@&@@( @@.  /@@@      @@@.              .@@@@  (@@@@@&*.            .*%@@@@@@&                                     ");
+        System.out.println("                                 @@@@   @@#  %@@#@@(@%                             @@@@.      .@@@@@@@@@@@@@@@@@@@@@@@@@@                                      ");
+        System.out.println("                                  @@@@@   @@@@@@% &@@&                           @@@@@         @@@@@#@@@@@.%@@@@@@. %@@@@,                                     ");
+        System.out.println("                                    @@@@@.                                    *@@@@@/         *@@@@  @@@@@    .@@@&  @@@@@                                     ");
+        System.out.println("                                      @@@@@@#                             *@@@@@@@.           @@@@. .@@@@&    .@@@@  @@@@@                                     ");
+        System.out.println("                                         @@@@@@@@*                   ,%@@@@@@@@@.            %@@@&  .@@@@.    .@@@@. (@@@@,                                    ");
+        System.out.println("                                            .@@@@@@@@@@@@@@%%%%@@@@@@@@@@@@,                 @@@@   #@@@@     .@@@@                                            ");
+        System.out.println("                                                 ,@@@@@@@@@@@@@@@@@@@@.                      (@@.   &@@@@     .@@@.                                            ");
+        System.out.println("                                                                                              .     @@@@@                                                      ");
+        System.out.println("                                                                                                                                                               ");
+        System.out.println("                                                                                                                                                               ");
     }
 
 }
