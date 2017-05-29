@@ -20,30 +20,57 @@ public class Pi {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner ler = new Scanner(System.in);
-        int j1 = 0, j2 = 0;
+        int jogadas = 10;// numero de jogadas
         int[][] arena = new int[1][1];
         boolean esmagou = false;
+        boolean podeir=false;
+        
+        desenhaMosca();// imagem da mosca
         //Pedir tamanho da arena
-        desenhaMosca();
+        while (podeir==false){
         int op = menuArena();
         switch (op) {
             case 1:
                 arena = new int[3][3];
-                //desenhaArena(arena);
+                podeir = true;
                 break;
             case 2:
                 arena = new int[6][6];
-                //desenhaArena(arena);
+                podeir = true;
                 break;
             case 3:
                 arena = new int[12][12];
-                //desenhaArena(arena);
+                podeir = true;
+                break;
+            case 4:
+                System.out.println("Insira a quantidade de linhas desejada.");
+                int linha = ler.nextInt();
+                System.out.println("Insira a quantidade de colunas desejada.");
+                int coluna = ler.nextInt();
+                arena = new int[linha][coluna];
+                podeir = true;
+                break;
+            case 5:
+                int opm = menuOpcoes();
+                switch (opm) {
+                    case 1:
+
+                        System.out.println("Insira a quantidade de jogadas desejada: ");
+                        jogadas = ler.nextInt();
+                        
+                    default:
+                        System.out.println("Opção inválida");
+                        
+                }
                 break;
             default:
                 System.out.println("Opção inválida");
+                break;
+
+        }
         }
         //Inicia o jogo
-        while (j1 != 5) {
+        while (jogadas != 0) {
             desenhaArena(arena);
             arena = posicaoMosca(arena);
             try {
@@ -53,9 +80,9 @@ public class Pi {
                 int linhaTapa = ler.nextInt();
                 if (arena[colunaTapa - 1][linhaTapa - 1] == 1) {
                     esmagou = true;
-                    j1++;
+                    jogadas--;
 
-                    System.out.println("PONTUAÇÃO: " + j1);
+                    System.out.println("PONTUAÇÃO: " + jogadas);
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Posição inválida");
@@ -68,12 +95,23 @@ public class Pi {
 
     }
 
+    public static int menuOpcoes() {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Opções: ");
+        System.out.println("1.Alterar numero de jogadas");
+
+        int op = ler.nextInt();
+        return op;
+    }
+
     public static int menuArena() {
         Scanner ler = new Scanner(System.in);
         System.out.println("Selecione o tamanho da arena");
         System.out.println("1. pequena");
         System.out.println("2. Média");
         System.out.println("3. Grande");
+        System.out.println("4. Arena Personalizada");
+        System.out.println("5. Opções");
         System.out.print("Opção: ");
         int op = ler.nextInt();
         return op;
