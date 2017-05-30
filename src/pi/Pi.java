@@ -23,7 +23,7 @@ public class Pi {
         int jogadas = 10;// numero de jogadas
         int pontos = 0;
         int[][] arena = new int[1][1];
-        boolean esmagou = false;
+        boolean posicoesCorretas = false;
         boolean inciaJogo = false;
 
         desenhaMosca();// imagem da mosca
@@ -71,29 +71,36 @@ public class Pi {
         }//Fim do while do menu
         //######################################################################
         //Inicia o jogo
-        System.out.println("Olá, vc possui "+ jogadas +" rodadas para esmagar a mosca o maior numero de vezes possível");
+        System.out.println("Olá, vc possui " + jogadas + " rodadas para esmagar a mosca o maior numero de vezes possível");
         while (jogadas != 0) {
             desenhaArena(arena);
             arena = posicaoMosca(arena);
-            try {
-                
-                System.out.println("Digite a coluna do tapa:");
-                int colunaTapa = ler.nextInt();
-                System.out.println("Digite a linha do tapa:");
-                int linhaTapa = ler.nextInt();
-                if (arena[colunaTapa - 1][linhaTapa - 1] == 1) {
-                    esmagou = true;
 
-                    System.out.println("PONTUAÇÃO: " + pontos);
+            try {
+                while (posicoesCorretas != true) {//valida se a posição digitada é valida
+                    System.out.println("Digite a coluna do tapa:");
+                    int colunaTapa = ler.nextInt();
+                    System.out.println("Digite a linha do tapa:");
+                    int linhaTapa = ler.nextInt();
+                    if (arena[colunaTapa - 1][linhaTapa - 1] == 1) {
+                        splaft();
+                        pontos++;
+                        System.out.println("PONTUAÇÃO: " + pontos);
+                        
+                    }
+                    posicoesCorretas = true;//posição valida prossegue o jogo
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Posição inválida");
-                return;
+               
             }
+            posicoesCorretas = false;// reseta para validacao
+
             jogadas--;
+            System.out.println("Quantidade de jogadas: "+ jogadas);
 
         }// fim do while
-        System.out.println("SUA PONTUAÇÃO TOTAL FOI: "+ pontos);
+        System.out.println("SUA PONTUAÇÃO TOTAL FOI: " + pontos);
 
     }
 
@@ -101,7 +108,7 @@ public class Pi {
         Scanner ler = new Scanner(System.in);
         System.out.println("Opções: ");
         System.out.println("1.Alterar numero de jogadas");
-        System.out.println("2. Jogar contra computador?");
+        //System.out.println("2. Jogar contra computador?");
 
         int op = ler.nextInt();
         return op;
@@ -147,7 +154,7 @@ public class Pi {
                 }
 
                 if (arena[linha][coluna] != 1 && arena[linha][coluna] == 0) {
-                    System.out.printf(" . . .\n . . .\n . . .");
+                    System.out.printf(" . ");
                 }
 
             }
