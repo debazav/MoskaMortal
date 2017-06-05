@@ -12,7 +12,8 @@ import java.util.ArrayList;
  * @author victor.wdebaza
  */
 public class Desenhos {
-     public static void cor(String cor) {
+
+    public static void cor(String cor) {
         int valor = 0;
 
         switch (cor.toLowerCase()) {
@@ -193,4 +194,145 @@ public class Desenhos {
         System.out.println("     ###   ###    ###   #######   #######  ###  ###  ########       ###   ####   ###   ########   ###     #####  ########  ###    ");
 
     }
+
+    public static void MOSKAESMAGADA() {
+
+        char[] s1 = ("                                                                                                                    Z@X▓                       ").toCharArray();
+        char[] s2 = ("                                     78Zr▓                                                                              S@MMM▓                      ").toCharArray();
+        char[] s3 = ("                                  @MMMMMMMW▓                   MMMMM▓                                 MMMMW▓           ,MMMMM▓                      ").toCharArray();
+        char[] s4 = ("                                 MMMMMM0MMW▓                   MMMMM▓                                .MMMMM▓            MMMMM▓                      ").toCharArray();
+        char[] s5 = ("                                 MMMMMM▓        .0Ma▓         MMMMZ▓                  XW@W@Z▓        iMMMMM            ZMMMM▓                      ").toCharArray();
+        char[] s6 = ("                                 ;MMMMMM▓       MMMMMM0,▓     MMMMa▓      rWMMMMW.▓    MMMMMMMr▓     rMMMMMMMM@7▓     .MMMM▓                       ").toCharArray();
+        char[] s7 = ("                                  0MMMMMM▓     WMMMMMMMM0▓    MMMMa▓    XMMMMMMMMM▓   .MMMM;i,▓      2MMMMMMMMMMM▓     MMMM▓                       ").toCharArray();
+        char[] s8 = ("                                   MMMMMMS▓    MMMMZ▓ ZMMM8▓  MMMMZ▓   XMM0XaMMMMW▓   MMMMr▓        8MMMMZ rMMMMr▓    WMMM▓                      ").toCharArray();
+        char[] s9 = ("                                    MMMMMM▓   .MMMM7▓  WMMM▓  MMMMZ▓        a@MMMMM▓   :MMMMa▓      BMMMM:▓   MMMa▓   8MMM▓                      ").toCharArray();
+        char[] s10 = ("                                   .MMMMMa▓  .MMMMr▓  ZMMM.▓ MMMMB▓      ZMMMMMMMM▓    BMMMMi▓     0MMMMi▓   MMMZ▓   0MMM▓                       ").toCharArray();
+        char[] s11 = ("                                    SMMMMM▓   MMMM7▓  MMMM▓  MMMMM▓    0MMM▓  MMMM▓     MMMMW▓    0MMMM:▓   MMMZ▓    MM8▓                       ").toCharArray();
+        char[] s12 = ("                                     MMMMM▓   MMMMSiMMMMZ▓   0MMMM▓    MMMX▓ rMMMM▓    .@MMMM▓     MMMMM,▓  ,MMMZ▓                                ").toCharArray();
+        char[] s13 = ("                                  SWSMMMMM▓   MMMMMMMMMi▓    MMMMB▓    MMMMMMMMMM▓   @MMMMM;▓      XMMMM.▓  ,MMMZ▓   rMMMa▓                       ").toCharArray();
+        char[] s14 = ("                                  MMMMMMM7▓   MMMMMMa▓        XB@i▓     .XZ2i iS,▓   .22Xi▓         2WZ▓    ;ZZ▓      8MMMMa▓                      ").toCharArray();
+        char[] s15 = ("                                   200ZS.▓   MMMM.▓                                                                       BMMB▓                       ").toCharArray();
+        char[] s16 = ("                                             WMMM▓                                                                                                ").toCharArray();
+        char[] s17 = ("                                             .MMM▓                                                                                                ").toCharArray();
+        char[] s18 = ("                                              .i▓    				                                                                             ").toCharArray();
+        ArrayList<char[]> splashMosca = new ArrayList<>();
+        splashMosca.add(s1);
+        splashMosca.add(s2);
+        splashMosca.add(s3);
+        splashMosca.add(s4);
+        splashMosca.add(s5);
+        splashMosca.add(s6);
+        splashMosca.add(s7);
+        splashMosca.add(s8);
+        splashMosca.add(s9);
+        splashMosca.add(s10);
+        splashMosca.add(s11);
+        splashMosca.add(s12);
+        splashMosca.add(s13);
+        splashMosca.add(s14);
+        splashMosca.add(s15);
+        splashMosca.add(s16);
+        splashMosca.add(s17);
+        splashMosca.add(s18);
+
+        splashMosca.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+                
+                cor("verde");
+                //fundo("verde");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+
+        char[] x1 = ("                                                                           ########      ############                              ").toCharArray();
+        char[] x2 = ("                                                                          ###     #########        ####                            ").toCharArray();
+        char[] x3 = ("                                                              ###       ###         ###               ##                           ").toCharArray();
+        char[] x4 = ("                                                          ############  #           ##                 ##                          ").toCharArray();
+        char[] x5 = ("                                              ########  ###         #####           #          #       ##                          ").toCharArray();
+        char[] x6 = ("                                           ####      ####              ##          ##         ##        #                          ").toCharArray();
+        char[] x7 = ("                                          ##          #                 ##         ##         ##        #                          ").toCharArray();
+        char[] x8 = ("                                         ##          #                   #         #          #        ##                          ").toCharArray();
+        char[] x9 = ("                                         #    ##  # ##       #  ###      ##        #      ##  #        #                           ").toCharArray();
+        char[] x10 = ("                                       ##     ###  ##        ###        ##        #       #####      ##                            ").toCharArray();
+        char[] x11 = ("                                       ##      ##  ##       ###         ####      #         #       ##                             ").toCharArray();
+        char[] x12 = ("                                        #     #  ####      ##  #        ## ###    #         #      ##                              ").toCharArray();
+        char[] x13 = ("                                        ##   #      #      #    #       #    ##   #     #  ##    ##                                ").toCharArray();
+        char[] x14 = ("                                         ##         ##                 ##     ##  ##            ##                                 ").toCharArray();
+        char[] x15 = ("                                          ###       ###              ###       ##  #    ########                                   ").toCharArray();
+        char[] x16 = ("                                            ########   ##          ###          ## ######     ####                                 ").toCharArray();
+        char[] x17 = ("                                              ##        ############            #####           ###                                ").toCharArray();
+        char[] x18 = ("                                             ##             #####                #                ##                               ").toCharArray();
+        char[] x19 = ("                                             #                                   ##               ##                               ").toCharArray();
+        char[] x20 = ("                                             #                                   ##                ##                              ").toCharArray();
+        char[] x21 = ("                                            ##                                   ##                ##                              ").toCharArray();
+        char[] x22 = ("                                            ##              #########            ##                ##                              ").toCharArray();
+        char[] x23 = ("                                             #          #####   ###########      #                 ##                              ").toCharArray();
+        char[] x24 = ("                                             ##       ###          #   ######   ##                 ##                              ").toCharArray();
+        char[] x25 = ("                                              #      #            ##  ##  ###   #                  #                               ").toCharArray();
+        char[] x26 = ("                                              ##                  ##  #  ##    ##                 ##                               ").toCharArray();
+        char[] x27 = ("                                               ##                 ##    ##    ######           ###                                 ").toCharArray();
+        char[] x28 = ("                                                ###                ######   ###    ###############                                 ").toCharArray();
+        char[] x29 = ("                                                 ####                     ####     ######   ## ###                                 ").toCharArray();
+        char[] x30 = ("                                                   ####                 ####      ###  ##   ##  ###                                ").toCharArray();
+        char[] x31 = ("                                                      ########    ########        ##  ###   ###  ##                                ").toCharArray();
+        char[] x32 = ("                                                          ###########             ##  ###   ##                                     ").toCharArray();
+        char[] x33 = ("                                                                                                                                   ").toCharArray();
+        ArrayList<char[]> moscaEsmagada = new ArrayList<>();
+        moscaEsmagada.add(x1);
+        moscaEsmagada.add(x2);
+        moscaEsmagada.add(x3);
+        moscaEsmagada.add(x4);
+        moscaEsmagada.add(x5);
+        moscaEsmagada.add(x6);
+        moscaEsmagada.add(x7);
+        moscaEsmagada.add(x8);
+        moscaEsmagada.add(x9);
+        moscaEsmagada.add(x10);
+        moscaEsmagada.add(x11);
+        moscaEsmagada.add(x12);
+        moscaEsmagada.add(x13);
+        moscaEsmagada.add(x14);
+        moscaEsmagada.add(x15);
+        moscaEsmagada.add(x16);
+        moscaEsmagada.add(x17);
+        moscaEsmagada.add(x18);
+        moscaEsmagada.add(x19);
+        moscaEsmagada.add(x20);
+        moscaEsmagada.add(x21);
+        moscaEsmagada.add(x22);
+        moscaEsmagada.add(x23);
+        moscaEsmagada.add(x24);
+        moscaEsmagada.add(x25);
+        moscaEsmagada.add(x26);
+        moscaEsmagada.add(x27);
+        moscaEsmagada.add(x28);
+        moscaEsmagada.add(x29);
+        moscaEsmagada.add(x30);
+        moscaEsmagada.add(x31);
+        moscaEsmagada.add(x32);
+        moscaEsmagada.add(x33);
+
+        moscaEsmagada.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+                cor("preto");
+                //fundo("preto");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+    }
+
 }
