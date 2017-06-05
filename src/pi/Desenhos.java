@@ -12,7 +12,8 @@ import java.util.ArrayList;
  * @author victor.wdebaza
  */
 public class Desenhos {
-     public static void cor(String cor) {
+
+    public static void cor(String cor) {
         int valor = 0;
 
         switch (cor.toLowerCase()) {
@@ -193,4 +194,350 @@ public class Desenhos {
         System.out.println("     ###   ###    ###   #######   #######  ###  ###  ########       ###   ####   ###   ########   ###     #####  ########  ###    ");
 
     }
+
+    public static void MOSKAESMAGADA() {
+
+        char[] s1 = ("                                                                                                                    Z@X▓                       ").toCharArray();
+        char[] s2 = ("                                     78Zr▓                                                                              S@MMM▓                      ").toCharArray();
+        char[] s3 = ("                                  @MMMMMMMW▓                   MMMMM▓                                 MMMMW▓           ,MMMMM▓                      ").toCharArray();
+        char[] s4 = ("                                 MMMMMM0MMW▓                   MMMMM▓                                .MMMMM▓            MMMMM▓                      ").toCharArray();
+        char[] s5 = ("                                 MMMMMM▓        .0Ma▓         MMMMZ▓                  XW@W@Z▓        iMMMMM            ZMMMM▓                      ").toCharArray();
+        char[] s6 = ("                                 ;MMMMMM▓       MMMMMM0,▓     MMMMa▓      rWMMMMW.▓    MMMMMMMr▓     rMMMMMMMM@7▓     .MMMM▓                       ").toCharArray();
+        char[] s7 = ("                                  0MMMMMM▓     WMMMMMMMM0▓    MMMMa▓    XMMMMMMMMM▓   .MMMM;i,▓      2MMMMMMMMMMM▓     MMMM▓                       ").toCharArray();
+        char[] s8 = ("                                   MMMMMMS▓    MMMMZ▓ ZMMM8▓  MMMMZ▓   XMM0XaMMMMW▓   MMMMr▓        8MMMMZ rMMMMr▓    WMMM▓                      ").toCharArray();
+        char[] s9 = ("                                    MMMMMM▓   .MMMM7▓  WMMM▓  MMMMZ▓        a@MMMMM▓   :MMMMa▓      BMMMM:▓   MMMa▓   8MMM▓                      ").toCharArray();
+        char[] s10 = ("                                   .MMMMMa▓  .MMMMr▓  ZMMM.▓ MMMMB▓      ZMMMMMMMM▓    BMMMMi▓     0MMMMi▓   MMMZ▓   0MMM▓                       ").toCharArray();
+        char[] s11 = ("                                    SMMMMM▓   MMMM7▓  MMMM▓  MMMMM▓    0MMM▓  MMMM▓     MMMMW▓    0MMMM:▓   MMMZ▓    MM8▓                       ").toCharArray();
+        char[] s12 = ("                                     MMMMM▓   MMMMSiMMMMZ▓   0MMMM▓    MMMX▓ rMMMM▓    .@MMMM▓     MMMMM,▓  ,MMMZ▓                                ").toCharArray();
+        char[] s13 = ("                                  SWSMMMMM▓   MMMMMMMMMi▓    MMMMB▓    MMMMMMMMMM▓   @MMMMM;▓      XMMMM.▓  ,MMMZ▓   rMMMa▓                       ").toCharArray();
+        char[] s14 = ("                                  MMMMMMM7▓   MMMMMMa▓        XB@i▓     .XZ2i iS,▓   .22Xi▓         2WZ▓    ;ZZ▓      8MMMMa▓                      ").toCharArray();
+        char[] s15 = ("                                   200ZS.▓   MMMM.▓                                                                       BMMB▓                       ").toCharArray();
+        char[] s16 = ("                                             WMMM▓                                                                                                ").toCharArray();
+        char[] s17 = ("                                             .MMM▓                                                                                                ").toCharArray();
+        char[] s18 = ("                                              .i▓    				                                                                             ").toCharArray();
+        ArrayList<char[]> splashMosca = new ArrayList<>();
+        splashMosca.add(s1);
+        splashMosca.add(s2);
+        splashMosca.add(s3);
+        splashMosca.add(s4);
+        splashMosca.add(s5);
+        splashMosca.add(s6);
+        splashMosca.add(s7);
+        splashMosca.add(s8);
+        splashMosca.add(s9);
+        splashMosca.add(s10);
+        splashMosca.add(s11);
+        splashMosca.add(s12);
+        splashMosca.add(s13);
+        splashMosca.add(s14);
+        splashMosca.add(s15);
+        splashMosca.add(s16);
+        splashMosca.add(s17);
+        splashMosca.add(s18);
+
+        splashMosca.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+
+                cor("verde");
+                //fundo("verde");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+
+        char[] x1 = ("                                                                           ########      ############                              ").toCharArray();
+        char[] x2 = ("                                                                          ###     #########        ####                            ").toCharArray();
+        char[] x3 = ("                                                              ###       ###         ###               ##                           ").toCharArray();
+        char[] x4 = ("                                                          ############  #           ##                 ##                          ").toCharArray();
+        char[] x5 = ("                                              ########  ###         #####           #          #       ##                          ").toCharArray();
+        char[] x6 = ("                                           ####      ####              ##          ##         ##        #                          ").toCharArray();
+        char[] x7 = ("                                          ##          #                 ##         ##         ##        #                          ").toCharArray();
+        char[] x8 = ("                                         ##          #                   #         #          #        ##                          ").toCharArray();
+        char[] x9 = ("                                         #    ##  # ##       #  ###      ##        #      ##  #        #                           ").toCharArray();
+        char[] x10 = ("                                       ##     ###  ##        ###        ##        #       #####      ##                            ").toCharArray();
+        char[] x11 = ("                                       ##      ##  ##       ###         ####      #         #       ##                             ").toCharArray();
+        char[] x12 = ("                                        #     #  ####      ##  #        ## ###    #         #      ##                              ").toCharArray();
+        char[] x13 = ("                                        ##   #      #      #    #       #    ##   #     #  ##    ##                                ").toCharArray();
+        char[] x14 = ("                                         ##         ##                 ##     ##  ##            ##                                 ").toCharArray();
+        char[] x15 = ("                                          ###       ###              ###       ##  #    ########                                   ").toCharArray();
+        char[] x16 = ("                                            ########   ##          ###          ## ######     ####                                 ").toCharArray();
+        char[] x17 = ("                                              ##        ############            #####           ###                                ").toCharArray();
+        char[] x18 = ("                                             ##             #####                #                ##                               ").toCharArray();
+        char[] x19 = ("                                             #                                   ##               ##                               ").toCharArray();
+        char[] x20 = ("                                             #                                   ##                ##                              ").toCharArray();
+        char[] x21 = ("                                            ##                                   ##                ##                              ").toCharArray();
+        char[] x22 = ("                                            ##              #########            ##                ##                              ").toCharArray();
+        char[] x23 = ("                                             #          #####   ###########      #                 ##                              ").toCharArray();
+        char[] x24 = ("                                             ##       ###          #   ######   ##                 ##                              ").toCharArray();
+        char[] x25 = ("                                              #      #            ##  ##  ###   #                  #                               ").toCharArray();
+        char[] x26 = ("                                              ##                  ##  #  ##    ##                 ##                               ").toCharArray();
+        char[] x27 = ("                                               ##                 ##    ##    ######           ###                                 ").toCharArray();
+        char[] x28 = ("                                                ###                ######   ###    ###############                                 ").toCharArray();
+        char[] x29 = ("                                                 ####                     ####     ######   ## ###                                 ").toCharArray();
+        char[] x30 = ("                                                   ####                 ####      ###  ##   ##  ###                                ").toCharArray();
+        char[] x31 = ("                                                      ########    ########        ##  ###   ###  ##                                ").toCharArray();
+        char[] x32 = ("                                                          ###########             ##  ###   ##                                     ").toCharArray();
+        char[] x33 = ("                                                                                                                                   ").toCharArray();
+        ArrayList<char[]> moscaEsmagada = new ArrayList<>();
+        moscaEsmagada.add(x1);
+        moscaEsmagada.add(x2);
+        moscaEsmagada.add(x3);
+        moscaEsmagada.add(x4);
+        moscaEsmagada.add(x5);
+        moscaEsmagada.add(x6);
+        moscaEsmagada.add(x7);
+        moscaEsmagada.add(x8);
+        moscaEsmagada.add(x9);
+        moscaEsmagada.add(x10);
+        moscaEsmagada.add(x11);
+        moscaEsmagada.add(x12);
+        moscaEsmagada.add(x13);
+        moscaEsmagada.add(x14);
+        moscaEsmagada.add(x15);
+        moscaEsmagada.add(x16);
+        moscaEsmagada.add(x17);
+        moscaEsmagada.add(x18);
+        moscaEsmagada.add(x19);
+        moscaEsmagada.add(x20);
+        moscaEsmagada.add(x21);
+        moscaEsmagada.add(x22);
+        moscaEsmagada.add(x23);
+        moscaEsmagada.add(x24);
+        moscaEsmagada.add(x25);
+        moscaEsmagada.add(x26);
+        moscaEsmagada.add(x27);
+        moscaEsmagada.add(x28);
+        moscaEsmagada.add(x29);
+        moscaEsmagada.add(x30);
+        moscaEsmagada.add(x31);
+        moscaEsmagada.add(x32);
+        moscaEsmagada.add(x33);
+
+        moscaEsmagada.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+                cor("preto");
+                //fundo("preto");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+    }
+
+    public static void Senac() {
+
+        char[] l1 = ("                                                                       .i:.                                             ").toCharArray();
+        char[] l2 = ("                                                                      iBBBBBqJi.                                        ").toCharArray();
+        char[] l3 = ("                                                                    jBBBBBBBBBBBBBBSr.                                  ").toCharArray();
+        char[] l4 = ("                                                                  UBBBBBBBBBBBBBBBBBBBBBF:                              ").toCharArray();
+        char[] l5 = ("                                                                 :5v:.           ..:rj0BBBBBU,                          ").toCharArray();
+        char[] l6 = ("                                                                                           :UNF;.                       ").toCharArray();
+        ArrayList<char[]> senacTopo = new ArrayList<>();
+        senacTopo.add(l1);
+        senacTopo.add(l2);
+        senacTopo.add(l3);
+        senacTopo.add(l4);
+        senacTopo.add(l5);
+        senacTopo.add(l6);
+
+        senacTopo.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+
+                cor("azul");
+                //fundo("verde");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+
+        char[] z1 = ("                                                                    ..::iirr77777r;ii:,..      ..                       ").toCharArray();
+        char[] z2 = ("                                                            :rvJU255F511222UUUUUUUUUUUUUUUUUYLri:..                     ").toCharArray();
+        char[] z3 = ("                                                      .,:irUXS52uJYYLLLLLLvvvvvvvLvvLLLLYYYjU1FPN00XUvi,                ").toCharArray();
+        char[] z4 = ("                                                 .,:irrr;rjUYLvv77777777777777777777LLYJjJYLv7riii:iiii::               ").toCharArray();
+        char[] z5 = ("                                                 ,v7;i::iLY77777777777777777777vLYYL7i:.                                ").toCharArray();
+        char[] z6 = ("                                                   :ii::vY77777777777777777LYYLr:.                                      ").toCharArray();
+        char[] z7 = ("                                                    .::7Y77777777777777vLYL;:                                           ").toCharArray();
+        char[] z8 = ("                                                      ijL77777777777vYY7:                                               ").toCharArray();
+        char[] z9 = ("                                                      ::;7v7777777LY7:                                                  ").toCharArray();
+        char[] z10 = ("                                                     ::,.,i7L77LY7:                                                     ").toCharArray();
+        char[] z11 = ("                                                    .i::,..,i7Yr.                                                       ").toCharArray();
+        char[] z12 = ("                                                    :i::::::,.                                                          ").toCharArray();
+        char[] z13 = ("                                                    i::::::.                                                            ").toCharArray();
+        char[] z14 = ("                                                    i::::.                                                              ").toCharArray();
+        char[] z15 = ("                                                   .ii:.                                                                ").toCharArray();
+        char[] z16 = ("                                                   ,r,                                                                  ").toCharArray();
+        ArrayList<char[]> senacMeio = new ArrayList<>();
+        senacMeio.add(z1);
+        senacMeio.add(z2);
+        senacMeio.add(z3);
+        senacMeio.add(z4);
+        senacMeio.add(z5);
+        senacMeio.add(z6);
+        senacMeio.add(z7);
+        senacMeio.add(z8);
+        senacMeio.add(z9);
+        senacMeio.add(z10);
+        senacMeio.add(z11);
+        senacMeio.add(z12);
+        senacMeio.add(z13);
+        senacMeio.add(z14);
+        senacMeio.add(z15);
+        senacMeio.add(z16);
+
+        senacMeio.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+
+                cor("vermelho");
+                //fundo("verde");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+
+        char[] q1 = ("          .,::::,.                                                                                                                     ").toCharArray();
+        char[] q2 = ("      ;GBBBBBBBBBBi                                                                                              .iY5qZOi              ").toCharArray();
+        char[] q3 = ("    7BBBBBBBBBBBBBi                                                                                           7MBBBBBBBBj              ").toCharArray();
+        char[] q4 = ("   SBBBBBBBkY77YPB:              :1MBBBBBBBEL.            :j8BBBBBBBN7                  ,BBBBBBP7          .NBBBBBBBBBBBj              ").toCharArray();
+        char[] q5 = ("  ,BBBMMB7                    .kBBBBBBBBBBBBBBBv        YBBBBBBBBBBBBBBB:               .BBBBBBBBBM.      UBBBBBBBBBqLi::              ").toCharArray();
+        char[] q6 = ("  7BBMOMB.                   vBBBBBBBBBMBBBBBBBBB.    .BBBBBBBBBBBBBBBBBBq               BBBBBBBBBBBr    MBBBBMMBG:                    ").toCharArray();
+        char[] q7 = ("   BBMMMBBu.                uBBBBMBU      .PBBBBBB.   BBBBMMBu.   ,NBBBBBB8                 .XBBBBBBB.  qBBBMOOB7                      ").toCharArray();
+        char[] q8 = ("   iBBBBBBBBBBMXJ7i.       :BBBMMB:         rBBBBBB  5BBMMMB,       7BBBBBBr                  :BMMBBBU :BBMOOOBv                       ").toCharArray();
+        char[] q9 = ("     jBBBBBBBBBBBBBBBBj    PBBMOMM   ....   .BBMBBB  BBMOOBF         BBMBBB8       :7u552UUuLiiMMMMBBk LBBMOOMB                        ").toCharArray();
+        char[] q10 = ("       i2GBBBBBBBBBBBBBU  MBMOOMBBBBBBBBBBBBBBBBBB  BBMOOBX         MBMMBBB    iBBBBBBBBBBBBBBBMOMBBN :BBMOOBB                        ").toCharArray();
+        char[] q11 = ("             ,rFBBBBBBBBq FBMOMBBGMBBBBBBBMGqPPqMM  BBMOMBZ         MBMOMBO   1BBBBBBB1v77rr;rMBMMMB0  BBMMMBBL                       ").toCharArray();
+        char[] q12 = ("                  GBBBBBB :BBMMMB                   BBMOMBG         BBMMMBM  .BBBBMB:         GBMMMBE  NBBMMBBB7                      ").toCharArray();
+        char[] q13 = ("   :BX.           :BMMMBB7 qBBMMBM.                 BBMOMBG         BBMMMBB  ,BBMMMB         7BBOMMB8   OBBMBBBBM:                    ").toCharArray();
+        char[] q14 = ("..MBBBBBZL:.     :MBMMMBB.  0BBBBBBBEj7L,           BBMOMBG         BBMOMBO   BBBMMBBr.   .rBBBMMMMBM    UBBBBBBBBB0v:,.              ").toCharArray();
+        char[] q15 = ("iBBBBBBBBBBBBBBBBBBBMBBB:    iBBBBBBBBBBP           BBBMBBM         BBBMBBG   .BBBBBBBBBBBBBB0MBBMBBB     .NBBBBBBBBBBBY              ").toCharArray();
+        char[] q16 = ("  .UBBBBBBBBBBBBBBBBBBv        :PBBBBBBBk           BBBBBBB         BBBBBBB     :ZBBBBBBBBB1  BBBBBBB        YBBBBBBBBBJ              ").toCharArray();
+        char[] q17 = ("     .:rY2FkXXXS1j7i.             .,:iii.           .......         .......        .,:::.     .......          .:rLU155r              ").toCharArray();
+        ArrayList<char[]> senacNome = new ArrayList<>();
+        senacNome.add(q1);
+        senacNome.add(q2);
+        senacNome.add(q3);
+        senacNome.add(q4);
+        senacNome.add(q5);
+        senacNome.add(q6);
+        senacNome.add(q7);
+        senacNome.add(q8);
+        senacNome.add(q9);
+        senacNome.add(q10);
+        senacNome.add(q11);
+        senacNome.add(q12);
+        senacNome.add(q13);
+        senacNome.add(q14);
+        senacNome.add(q15);
+        senacNome.add(q16);
+        senacNome.add(q17);
+
+        senacNome.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+                negrito(true);
+
+                cor("azul");
+                //fundo("verde");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+    }
+
+    public static void GameOver() {
+        char[] g1 = ("      .ZB00BBM▓                                                    X000B8i▓                                             ").toCharArray();
+        char[] g2 = ("     0MB:▓  :ZMM▓                                                :MMr  ,ZMM▓                                           ").toCharArray();
+        char[] g3 = ("    BMi▓       Z▓      ..               .         ,.             MM▓       MM▓   ,  .  ,  .     ,.          ::         ").toCharArray();
+        char[] g4 = ("    M@▓             aMM88M8▓   :MMWBMMMS8MMMB▓     7MBZBM2▓    2M▓       8M.▓  8MM2▓  aMMX▓  iM@Z8M0▓     WMWZMM,▓ ").toCharArray();
+        char[] g5 = ("    Ma▓     SZSS2▓  B@▓  WM▓  iMM▓   MM,▓ 0M▓    2MS▓  SM▓  8M▓       7M;▓   XMX▓   ;M▓   iMW▓  iM▓    MMr▓    ").toCharArray();
+        char[] g6 = ("    MM▓     irMMi▓   ,Z02WM▓    Mr▓    MM▓ 7M▓    MMiSa20S▓  iM7▓       WM▓     BM▓  M,▓   0M7X22XZZ▓    M2▓     ").toCharArray();
+        char[] g7 = ("    XM0▓      MW▓   MM▓  rM▓   M7▓    MM▓ 7M▓    MZM▓      . MM:▓     SMX▓      MM8Z▓      ;M;▓     .    M2▓     ").toCharArray();
+        char[] g8 = ("     ;MMZXXZ@M@▓    MMSXaMM▓    ZM;▓ 7MMX▓:MM.▓  0M0XX8MX▓      ZMWSXaMM:▓         MM▓      SMWSXZMZ▓    2MM;▓     ").toCharArray();
+        char[] g9 = ("       .7X7:          ,7r  :;    , ,, ,  i  . :     rX7:              iXXr                         iX7i       , .:       ").toCharArray();
+
+        ArrayList<char[]> gameOver = new ArrayList<>();
+        gameOver.add(g1);
+        gameOver.add(g2);
+        gameOver.add(g3);
+        gameOver.add(g4);
+        gameOver.add(g5);
+        gameOver.add(g6);
+        gameOver.add(g7);
+        gameOver.add(g8);
+        gameOver.add(g9);
+
+        gameOver.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+
+                negrito(true);
+                cor("vermelho");
+                //fundo("verde");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+
+    }
+
+    public static void Menu() {
+        
+        char[] m1 = (" ╔╦╗ ┌─┐┌┐┌  ┬ ┬                                                              ").toCharArray();
+        char[] m2 = (" ║║║ ├┤  │││ │ │                                                              ").toCharArray();
+        char[] m3 = (" ╩ ╩ └─┘ ┘└┘ └─┘                                                              ").toCharArray();
+        ArrayList<char[]> menu = new ArrayList<>();
+        menu.add(m1);
+        menu.add(m2);
+        menu.add(m3);
+        menu.forEach((linha) -> {
+            int numer = linha.length;
+            for (int i = 0; i < numer; i++) {
+
+                negrito(true);
+                cor("verde");
+                fundo("ciano");
+                System.out.print(linha[i]);
+                reset();
+                /*fundo("vermelho");
+                System.out.print(linha[i]);*/
+
+            }
+            System.out.println("");
+        });
+
+    }
+    
+    
+        
 }
+
