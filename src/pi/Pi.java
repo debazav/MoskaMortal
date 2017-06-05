@@ -102,7 +102,7 @@ public class Pi {
                         int linhaTapa = ler.nextInt();
                         
                         if (arena[colunaTapa - 1][linhaTapa - 1] == 1) { // O menos um traduz a coluna/linha do que o jogador inseriu                        
-                            Desenhos.splash();
+                            Desenhos.MOSKAESMAGADA();
                             pontos++;
                             arena[colunaTapa-1][linhaTapa -1] = 3;
                             Desenhos.cor("amarelo");
@@ -138,7 +138,7 @@ public class Pi {
 
                 jogarNovamente = false;
                 System.out.println("Game OVer");
-
+                Desenhos.Senac();
             } else {
                 jogarNovamente = true;
                 inciaJogo = false;
