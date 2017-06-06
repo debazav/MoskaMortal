@@ -5,6 +5,7 @@
  */
 package pi;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class Pi {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         int jogadas = 10;
-        int qtdMosca =1;
+        int qtdMosca = 1;
         int pontos = 0;
         int[][] arena = new int[1][1];
         boolean posicoesCorretas = false;
@@ -67,7 +68,7 @@ public class Pi {
                                 System.out.println("Digite a quantidade de moscas desejada");
                                 qtdMosca = ler.nextInt();
                                 break;
-                                
+
                             case 3:
                                 System.out.println("O objetivo do jogo é esmagar a maior quantidade possível de moskas."
                                         + "\nPara isso o jogador deve acertar a coordenada em que a moska estará."
@@ -92,41 +93,53 @@ public class Pi {
             Desenhos.reset();
             while (jogadas != 0) {
                 desenhaArena(arena);
-                arena = posicaoMosca2(arena,qtdMosca);
+                if (qtdMosca >= arena.length) {
+                    qtdMosca = arena.length - 1;// não deixa a quantidade de moscas ser igual ou maior que o nro de posições no array
+                }
+                arena = posicaoMosca2(arena, qtdMosca);
 
                 try {
-                    while (posicoesCorretas != true) {//valida se a posição digitada é valida
+                    do {//valida se a posição digitada é valida
                         System.out.println("Digite a coluna do tapa:");
                         int colunaTapa = ler.nextInt();
                         System.out.println("Digite a linha do tapa:");
                         int linhaTapa = ler.nextInt();
-                        
+
                         if (arena[colunaTapa - 1][linhaTapa - 1] == 1) { // O menos um traduz a coluna/linha do que o jogador inseriu                        
-                            Desenhos.splash();
+                            Desenhos.MOSKAESMAGADA();
                             pontos++;
-                            arena[colunaTapa-1][linhaTapa -1] = 3;
+                            arena[colunaTapa - 1][linhaTapa - 1] = 3;
                             Desenhos.cor("amarelo");
                             System.out.println("PONTUAÇÃO: " + pontos);
                             Desenhos.reset();
-                        }else{
-                        arena[colunaTapa-1][linhaTapa -1] = 2;//Define onde foi o tapa
+                        } else {
+                            arena[colunaTapa - 1][linhaTapa - 1] = 2;//Define onde foi o tapa
                             Desenhos.fundo("amarelo");
                             System.out.println("ERÔU!!!");
                             Desenhos.reset();
                         }
+                        
                         posicoesCorretas = true;//posição valida prossegue o jogo
-                    }
+                        jogadas--;
+                        Desenhos.limpaTela();
+                        System.out.println("Quantidade de jogadas restantes: " + jogadas);
+                        
+                    } while (posicoesCorretas != true);
+                    
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Desenhos.cor("vermelho");
                     System.out.println("Posição inválida");
                     Desenhos.reset();//reseta a cor
+                    
+
+                } catch (InputMismatchException e2) {
+                    Desenhos.cor("vermelho");
+                    System.out.println("Valor inválido");
+                    Desenhos.reset();//reseta a cor    
+                    posicoesCorretas = false;  
+                    
 
                 }
-                posicoesCorretas = false;// reseta para validacao
-
-                jogadas--;
-                Desenhos.limpaTela();
-                System.out.println("Quantidade de jogadas restantes: " + jogadas);
 
             }// fim do while
             Desenhos.fundo("amarelo");
@@ -137,7 +150,7 @@ public class Pi {
             if (jogarDeNovo.equalsIgnoreCase("n")) {
 
                 jogarNovamente = false;
-                System.out.println("Game OVer");
+                Desenhos.GameOver();
 
             } else {
                 jogarNovamente = true;
@@ -188,13 +201,13 @@ public class Pi {
         int linha, coluna;
         Random gp = new Random();
         int[][] novapos = new int[arena.length][arena.length];// cria novo array - copia do anterior
-        
+
         for (int i = 0; i < qtdMosca; i++) {
             linha = gp.nextInt(arena.length);// pega tamanho da arena -1 pra não estourar o array
             coluna = gp.nextInt(arena.length);// pega tamanho da arena -1 pra não estourar o array
-            if(novapos[linha][coluna] !=1){
-            novapos[linha][coluna] = 1;
-            }else{
+            if (novapos[linha][coluna] != 1) {
+                novapos[linha][coluna] = 1;
+            } else {
                 i--;
             }
         }
