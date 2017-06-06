@@ -561,7 +561,7 @@ public class Desenhos {
 
                 negrito(true);
                 cor("verde");
-                fundo("ciano");
+                //fundo("ciano");
                 System.out.print(linha[i]);
                 reset();
                 /*fundo("vermelho");
