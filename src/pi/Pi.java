@@ -27,7 +27,8 @@ public class Pi {
         boolean posicoesCorretas = false;
         boolean inciaJogo = false;
         boolean jogarNovamente = true;
-
+Desenhos.Realizacao();
+Desenhos.Senac();
         Desenhos.desenhaMosca();// imagem da mosca
         Desenhos.MOSKAMORTAL();
         //Pedir tamanho da arena
@@ -137,6 +138,7 @@ public class Pi {
                     System.out.println("Valor inválido");
                     Desenhos.reset();//reseta a cor    
                     posicoesCorretas = false;  
+                    ler.nextLine();
                     
 
                 }
@@ -174,6 +176,7 @@ public class Pi {
     }
 
     public static int menuArena() {
+        Desenhos.Menu();
         Scanner ler = new Scanner(System.in);
         System.out.println("Selecione o tamanho da arena");
         System.out.println("1. pequena");
